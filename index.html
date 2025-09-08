@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4</title> <!-- Título que aparece en la pestaña del navegador -->
+    <style>
+/* CSS */
+    /* Estilos mapa al pasar el mouse */
+        .mapa path:hover{
+            filter: brightness(0.7); 
+            /*aclara y/o oscurece*/
+        } 
+    /* Estilos etiqueta*/
+    .etiqueta{
+            border: 1px solid #00914d;
+            width: 150px; /*ancho etiqueta*/
+            height: 50px; /*alto etiqueta*/
+            border-radius: 10px; /*bordes redondeados pa q se vea lindo*/
+            background-color: rgb(155, 255, 223); /*color de relleno*/
+            display: flex; /*pa centrar el texto*/
+            position: absolute; /*pa q se mueva con el mouse*/
+            pointer-events: none; /*pa q no interfiera con el hover del mapa*/
+            font-family: 'Courier New', monospace; /*tipográfia*/
+        }
+    /* Estilos textoetiqueta*/
+        .etiqueta p{
+            margin: auto; /*centra el texto*/
+            margin-left: 10px; /*margen izquierdo*/
+            font-size: 14px; /*tamaño de letra*/
+        }
+    </style>
+</head>
+<body>
+    <svg width="500" height="500"> <!--tamaño del mapa-->
+        <g class="mapa"></g> <!--grupo donde se dibuja el mapa--> 
+    </svg>
+    <script src="./script.js" type="module"></script> <!-- Enlaza el Script -->
+</body>
+</html>
+
+/*muajajajajaj lo logré*/
