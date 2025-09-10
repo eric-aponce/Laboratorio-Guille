@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es"> <!--español -->
+<head>
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>Solemne</title> <!-- Título -->
+  
+  <!-- Cargar librería D3 -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Estilos -->
+  <style>
+    body {
+      font-family: 'Courier New', monospace; /* Tipografía general*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff4e3;
+      margin: 0; /* sin margen */
+      height: 100vh; /* vetana completa */
+    }
+    /* Espacio del gráfico */
+    .chart-container {
+      width: 700px; /* Ancho */
+      height: 650px; /* Alto */
+      background: #f9e8d9; /* Color de fondo */
+      border-radius: 20px; /* Bordes redondo */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+      padding: 20px; 
+      position: relative; 
+    }
+    /* Título y descripción */
+    h2 {
+      text-align: right;
+      margin-bottom: 5px; /* Espacio debajo del título */
+    }
+    /* DESCRUPCIÓN */
+    p {
+      text-align: right;
+      margin-top: 0; 
+      margin-bottom: 20px; 
+      color: #666;
+      font-size: 14px;
+    }
+    svg {
+      display: block;
+      margin: auto;
+    }
+    /* BARRAS */
+    .label {
+      font-size: 12px;
+      fill: #333; /* Color de texto */
+      text-anchor: middle; /* Centrado */
+    }
+/* MOUSE*/
+    #tooltip {
+      position: absolute; 
+      background: rgba(43, 21, 0, 0.85);
+      color: white;
+      padding: 6px 10px; 
+      border-radius: 4px; /* Bordes redondO */
+      font-size: 13px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="chart-container">
+    <h2>Cafés más vendidos al mes</h2>
+    <p> Venta de cafés.
+        Este gráfico muestra la cantidad de cafés vendidos mensualmente
+        según el tipo de café. Al pasar el mouse por las barras se ve la
+        cantidad de cafés vendidos.</p>
+    <svg id="chart" width="700" height="800"></svg>
+    <!-- Tooltip -->
+    <div id="tooltip"></div>
+  </div>
+  
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
